@@ -1,25 +1,26 @@
-import { Routes, Route } from 'react-router-dom';
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import Visas from './pages/Visas';
-import Testimonios from './pages/Testimonios';
-import Contacto from './pages/Contacto';
-import FloatingWhatsApp from './components/FloatingWhatsApp';
+import Testimonies from './pages/Testimonies';
+import Contact from './pages/Contact';
 
-function App() {
+export default function App() {
   return (
-    <>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/visas" element={<Visas />} />
-          <Route path="/testimonios" element={<Testimonios />} />
-          <Route path="/contacto" element={<Contacto />} />
-        </Routes>
-      </Layout>
-      <FloatingWhatsApp />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="visas" element={<Visas />} />
+          <Route path="testimonios" element={<Testimonies />} />
+          <Route path="contacto" element={<Contact />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
-
-export default App;

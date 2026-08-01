@@ -1,15 +1,81 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600;1,700&display=swap');
 
 @theme {
-  --color-primary: #1e3a8a; /* blue-900 */
-  --color-primary-light: #3b82f6; /* blue-500 */
-  --color-accent: #fbbf24; /* amber-400 */
-  --color-accent-light: #fcd34d; /* amber-300 */
-  --color-background: #f8fafc; /* slate-50 */
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --color-cream: #FDFCF8;
+  --color-navy: #001F3F;
+  --color-gold: #C5A02E;
 }
 
-@layer base {
-  body {
-    @apply bg-background text-slate-800 antialiased font-sans;
-  }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #FDFCF8;
+  color: #001F3F;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-serif {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-sans {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.bg-cream {
+  background-color: #FDFCF8;
+}
+
+.text-navy {
+  color: #001F3F;
+}
+
+.bg-navy {
+  background-color: #001F3F;
+}
+
+.text-gold {
+  color: #C5A02E;
+}
+
+.border-gold {
+  border-color: #C5A02E;
+}
+
+.gold-accent {
+  color: #C5A02E;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 31, 63, 0.08);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(197, 160, 46, 0.2);
+  box-shadow: 0 10px 30px -10px rgba(0, 31, 63, 0.05);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FDFCF8;
+}
+::-webkit-scrollbar-thumb {
+  background: #C5A02E;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A38222;
 }
